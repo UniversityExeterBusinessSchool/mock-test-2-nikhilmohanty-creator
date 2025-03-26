@@ -25,6 +25,27 @@ weekly_sales = [120, 85, 100, 90, 110, 95, 130]
 # Write a for loop that iterates through the list and prints whether each week's sales were above or below the average sales for the period.
 # Calculate and print the average sales.
 
+
+
+import pandas as pd
+
+# Dictionary containing sales data
+sales_data = {'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'], 'Sales': [200, 220, 210, 240, 250]}
+
+# Create DataFrame from dictionary
+df = pd.DataFrame(sales_data)
+
+# Display DataFrame
+print("Sales DataFrame:")
+print(df)
+
+# Calculate cumulative monthly sales
+df['Cumulative Sales'] = df['Sales'].cumsum()
+
+# Display DataFrame with cumulative sales
+print("\nSales DataFrame with Cumulative Sales:")
+print(df)
+
 #######################################################################################################################################################
 
 # Question 2 - String Manipulation
